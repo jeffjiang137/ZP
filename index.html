@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        border:0;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+input,textarea,select{
+    outline:none;
+}
+textarea{
+    resize:none;
+}
+img{
+    border:none;
+}
+body{
+    font-family:Arial,"微软雅黑", Helvetica, sans-serif;
+}
+    .top{
+        width: 100%;
+        height: 35px;
+        background: #113c62;
+    }
+    .top_inner{
+        width: 990px;
+        margin:0 auto;
+    }
+    .top_inner div{
+        float: right;
+        line-height: 35px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 12px;
+        width: 92px;
+        height: 35px;
+        text-align: center;
+    }
+    .english{
+        background: #da251c;
+    }
+    .zhongwen{
+        background: #90d31a;
+    }
+    .top_inner .shoucang,.top_inner .shouye{
+        color: #b7b7b7;
+    }
+    .top_inner .shoucang a{
+        border-left:#4d4d4d 1px solid;
+        padding:0 17px;
+    }
+    header{
+        width: 990px;
+        height: 90px;
+        margin:0 auto;
+    }
+    .logo{
+        padding-top:14px;
+        padding-right:48px;
+        float: left;
+
+    }
+    .search_box{
+        width: 147px;
+        height: 30px;
+        position: relative;
+        float: right;
+    }
+    .search{
+        width: 145px;
+        height: 28px;
+        border-radius:14px;
+        border:#c7c7c8 1px solid;
+        margin-top:32px;
+        float: right;
+        padding-left:14px;
+        background: #fbfbfb;
+        box-shadow:1px 1px 2px rgba(0,0,0,0.2) inset;
+    }
+    .search_icon{
+        position: absolute;
+        right: 12px;
+        top: 41px;
+    }
+    .nav_hot{
+        position: absolute;
+        left: -164px;
+        top: 22px;
+    }
+    .nav ul li a{
+        width: 100px;
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 90px;
+        color: #000;
+    }
+    .nav ul li a:hover{
+        background: #005587;
+        color: #fff;
+    }
+    .banner{
+        margin:0 auto;
+        width: 1423px;
+    }
+    .news{
+        width: 990px;
+        height: 92px;
+        margin:0 auto;
+        background-image: url(images/news_bg.png);
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+    .news_icon{
+        line-height: 92px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left:8px;
+        padding-right:50px;
+        float: left;
+    }
+    .news h1{
+        float: left;
+        font-size: 12px;
+        color: #555;
+        line-height: 92px;
+        position: relative;
+    }
+    .news_hot{
+        position: absolute;
+        top:30px;
+        right: -25px;
+    }
+    .news p{
+        float: right;
+        line-height: 92px;
+        font-size: 9px;
+        color: #999;
+    }
+    main{
+        width: 100%;
+        height: 287px;
+        background: #f5f5f5;
+        padding-top:35px;
+    }
+    .main_inner{
+        width: 990px;
+        margin:0 auto;
+    }
+    .main_inner img{
+        padding-bottom:11px;
+    }
+    .main_inner h3{
+        line-height: 24px;
+        font-size: 12px;
+        color: #434343;
+    }
+    .main_inner p{
+        line-height: 24px;
+        font-size: 12px;
+        color: #555;
+    }
+    .main_inner a{
+        line-height: 24px;
+        font-size: 12px;
+        color: #3271b5;
+    }
+    .main_l{
+        width: 314px;
+        height: 220px;
+        border-right:#bdbdbd 1px solid;
+        float: left;
+
+    }
+    .main_m{
+        width: 273px;
+        height: 220px;
+        border-left:#fff 1px solid;
+        border-right:#bdbdbd 1px solid;
+        padding: 0 42px;
+        float: left;
+
+    }
+    .main_r{
+        width: 275px;
+        height: 220px;
+        padding-left:40px;
+        border-left:#fff 1px solid;
+        float: right;
+    }
+    .guanyu{
+         width: 990px;
+        height: 149px;
+        margin:0 auto;
+    }
+    .guanyu_l{
+        width: 150px;
+        padding-top:20px;
+        float: left;
+
+    }
+    .guanyu_l h3{
+        line-height: 26px;
+        font-size: 14px;
+        color: #333;
+        font-weight: bold;
+    }
+    .guanyu_l ul li{
+        line-height: 20px;
+        font-size: 12px;
+        color: #999;
+    }
+    .guanyu_r{
+        float: right;
+        padding-top:20px;
+        width: 160px;
+    }
+    .erweima{
+        padding-bottom:13px;
+    }
+    .guanyu_r h4{
+        color: #666;
+        font-size: 12px;
+    }
+    .guanyu_r h2{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        color: #125794;
+    }
+    footer{
+        width: 100%;
+        height: 54px;
+        background: #f5f5f5;
+    }
+    .footer_inner{
+        width: 990px;
+        margin:0 auto;
+    }
+    .footer_inner h3{
+        line-height: 54px;
+        font-size: 12px;
+        color: #666;
+        float: left;
+    }
+    .footer_inner div{
+        float: right;
+        line-height: 54px;
+        font-size: 12px;
+        color: #999 ;
+    }
+    .footer_inner .puti a{
+        border-left:#999 1px solid;
+        padding:0 13px;
+    }
+    .footer_inner p{
+        width: 66px;
+    }
+    .footer_inner h4{
+        float: right;
+        line-height: 54px;
+        font-size: 12px;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_inner">
+            <div class="english"><a >ENGLISH</a></div>
+            <div class="zhongwen"><a >中文</a></div>
+            <div class="shoucang"><a >加入收藏</a></div>
+            <div class="shouye"><a >设为首页</a></div>
+        </div>
+    </div>
+    <header>
+            <div class="logo">
+                <img src="images/logo.png"  />
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="">主页</a></li>
+                    <li><a href="">关于我们</a></li>
+                    <li><a href="">应用领域</a></li>
+                    <li><a href="">照明趋势</a></li>
+                    <li><a href="">活动与新闻</a></li>
+                    <li><a href="">联系与支持</a></li>
+                </ul>
+            </div>
+            <div class="search_box">
+                <input type="text" class ="search">
+                <div class="search_icon"><img src="images/search.png"  /></div>
+                <img src="images/hot.png" class="nav_hot">
+            </div>
+    </header><!-- /header -->
+    <div class="banner"><img src="images/banner.png" ></div>
+    <div class="news">
+        <div class="news_icon">
+            新闻资讯
+        </div>
+            <h1>与您分享最新OEM产品，应用与精彩案例<img src="images/hot2.png" class="news_hot" /></h1>
+            <p>2016-02-13</p>
+    </div>
+    <main>
+        <div class="main_inner">
+            <div class="main_l">
+                <div><img src="images/shop_01.jpg" /></div>
+                <h3>汽车介绍</h3>
+                <p>在缺乏光线的情况下，如天气不佳或天色...</p>
+                <a href="">浏览更多信息  ></a>
+            </div>
+            <div class="main_m">
+                <div><img src="images/shop_02.jpg" /></div>
+                <h3>摩托车介绍</h3>
+                <p>与其他道路使用者相比，摩托车驾驶者更...</p>
+                <a href="">浏览更多信息  ></a>
+            </div>
+            <div class="main_r">
+                <div><img src="images/shop_03.png" /></div>
+                <h3>货车介绍</h3>
+                <p>飞利浦一直以来不断投身研究与开发智慧型...</p>
+                <a href="">浏览更多信息  ></a>
+            </div>
+        </div>
+    </main>
+    <div class="guanyu">
+        <div class="guanyu_l">
+            <h3>关于我们</h3>
+            <ul>
+                <li>&middot;产品手册</li>
+                <li>&middot;LED照明</li>
+                <li>&middot;OEM产品</li>
+                <li>&middot;特殊照明</li>
+            </ul>
+        </div>
+        <div class="guanyu_l">
+            <h3>应用领域</h3>
+            <ul>
+                <li>&middot;精彩案例</li>
+                <li>&middot;照明应用</li>
+                <li>&middot;绿色照明</li>
+                <li>&middot;灵感世界</li>
+            </ul>
+        </div>
+        <div class="guanyu_l">
+            <h3>照明趋势</h3>
+            <ul>
+                <li>&middot;联系我们</li>
+                <li>&middot;客服热线</li>
+                <li>&middot;设计助手</li>
+                <li>&middot;照明社区</li>
+            </ul>
+        </div>
+        <div class="guanyu_l">
+            <h3>活动与新闻</h3>
+            <ul>
+                <li>&middot;联系我们</li>
+                <li>&middot;客服热线</li>
+                <li>&middot;设计助手</li>
+                <li>&middot;照明社区</li>
+            </ul>
+        </div>
+        <div class="guanyu_l">
+            <h3>联系与支持</h3>
+            <ul>
+                <li>&middot;联系我们</li>
+                <li>&middot;客服热线</li>
+                <li>&middot;设计助手</li>
+                <li>&middot;照明社区</li>
+            </ul>
+        </div>
+        <div class="guanyu_r">
+            <div class="erweima"><img src="images/icon.png" ></div>
+            <h4>全国服务热线:</h4>
+            <h2>400-005-6621</h2>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_inner">
+            <h3>2016  深圳市地大装饰股份有限公司 版权所有</h3>
+            <div class="puti">
+            <a>菩提网络</a>
+            </div>
+            <div class="puti">
+            <a>菩提网络</a>
+            </div>
+            <div >
+            <p>菩提网络</p>
+            </div>
+            <h4>友情链接：</h4>
+        </div>
+    </footer>
+</body>
+</html>
